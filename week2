@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Economic Mobility, Equity & Systems Thinking - OA Fellows Cohort 9</title>
 
+    <!-- KEEP YOUR EXISTING STYLES EXACTLY AS-IS -->
+    <!-- (No changes needed — reuse your Week 1 CSS) -->
+
+    <style>
+        /* ✅ KEEP ALL YOUR EXISTING CSS FROM WEEK 1 HERE */
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#oa-framework">OA Framework</a></li>
+        <li><a href="#system">Understanding Systems</a></li>
+        <li><a href="#thinking">Systems Thinking</a></li>
+        <li><a href="#leadership">Systems Leadership</a></li>
+        <li><a href="#your-role">Your Role</a></li>
+        <li><a href="#activity">Applied Activity</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+<!-- Header -->
+<header>
+    <h1>OA Fellows Cohort 9</h1>
+    <p class="subtitle">Week 2: Economic Mobility, Equity & Systems Thinking</p>
+</header>
+
+<div class="divider"></div>
+
+<!-- Welcome -->
+<section id="welcome">
+<h2><span class="icon">👋</span>Welcome to Week 2</h2>
+
+<p>In Week 1, you explored workforce development as a system.</p>
+
+<p><strong>In Week 2, we go deeper.</strong></p>
+
+<p>This session shifts the focus from <strong>who is in the system</strong> → to <strong>how the system produces outcomes</strong>.</p>
+
+<p>Across communities, we see the same pattern:</p>
+
+<ul>
+<li>some individuals advance</li>
+<li>others remain stuck</li>
+<li>many cycle through services without long-term mobility</li>
+</ul>
+
+<p><strong>This is not random.</strong></p>
+
+<div class="callout">
+👉 These outcomes are shaped by how systems are designed.
+</div>
+
+<h3>Why This Matters</h3>
+
+<ul>
+<li>access to education and training</li>
+<li>labor market structure and job quality</li>
+<li>employer hiring practices</li>
+<li>availability of supports</li>
+<li>policy and funding decisions</li>
+</ul>
+
+<div class="callout">
+👉 When systems are misaligned, even strong programs struggle to produce lasting outcomes.
+</div>
+
+<div class="callout">
+<strong>Week 2 Focus:</strong><br><br>
+Understanding economic mobility as a system outcome — and identifying where systems enable or limit advancement.
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- OA Framework -->
+<section id="oa-framework">
+<h2><span class="icon">📊</span>The Opportunity Accelerator Framework</h2>
+
+<p>The OA framework provides a structure for responding to workforce system challenges.</p>
+
+<ul>
+<li><strong>Assess & Plan</strong> → Understanding system conditions</li>
+<li><strong>Equip & Connect</strong> → Delivering services and pathways</li>
+<li><strong>Launch & Evaluate</strong> → Supporting outcomes and measuring success</li>
+</ul>
+
+<h3>Applying OA in Week 2</h3>
+
+<div class="callout">
+👉 OA becomes a <strong>lens for analyzing system performance</strong>
+</div>
+
+<ul>
+<li>Where are outcomes breaking down?</li>
+<li>Which SDAs influence those breakdowns?</li>
+<li>What design decisions are contributing?</li>
+</ul>
+
+<div class="callout">
+<strong>system conditions → service design → participant outcomes</strong>
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Understanding Systems -->
+<section id="system">
+<h2><span class="icon">🔗</span>Understanding Economic Mobility as a System</h2>
+
+<p>Economic mobility is not a single event.</p>
+
+<p>It is shaped by multiple systems interacting over time.</p>
+
+<h3>Key System Dynamics</h3>
+
+<h4>Structural Inequality</h4>
+<p>Access to opportunity is not evenly distributed.</p>
+
+<h4>Labor Market Segmentation</h4>
+<ul>
+<li>low-wage roles</li>
+<li>limited advancement pathways</li>
+<li>unstable employment</li>
+</ul>
+
+<h4>Racialized Workforce Outcomes</h4>
+<p>Outcomes differ across populations due to structural inequities.</p>
+
+<h4>System Design</h4>
+<ul>
+<li>who enters services</li>
+<li>what services they receive</li>
+<li>what outcomes are possible</li>
+</ul>
+
+<div class="callout">
+👉 Economic mobility is produced by systems — not just effort.
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Systems Thinking -->
+<section id="thinking">
+<h2><span class="icon">🧠</span>Systems Thinking in Workforce Development</h2>
+
+<p>Systems thinking moves us from symptoms → root causes.</p>
+
+<p>Instead of:</p>
+<p>❌ Why aren’t participants succeeding?</p>
+
+<p>We ask:</p>
+<p>✅ What conditions are shaping outcomes?</p>
+
+<h3>Core Practices</h3>
+
+<ul>
+<li>identify patterns</li>
+<li>map relationships</li>
+<li>analyze system interactions</li>
+<li>identify leverage points</li>
+</ul>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Leadership -->
+<section id="leadership">
+<h2><span class="icon">👔</span>Systems Leadership in Economic Mobility</h2>
+
+<ul>
+<li>see beyond programs</li>
+<li>understand system interactions</li>
+<li>use data for decisions</li>
+<li>align resources</li>
+<li>address root causes</li>
+</ul>
+
+<div class="callout">
+👉 Leadership is about shaping how systems produce outcomes.
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Your Role -->
+<section id="your-role">
+<h2><span class="icon">🟦</span>Stepping Into Your Role</h2>
+
+<ul>
+<li>Where are outcomes breaking down?</li>
+<li>Why?</li>
+<li>How can you influence change?</li>
+</ul>
+
+<div class="callout">
+<strong>Observation → Explanation → Action</strong>
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Activity -->
+<section id="activity">
+<h2><span class="icon">🔍</span>Applied Activity: Systems Mapping</h2>
+
+<div class="activity-box">
+<h4>Purpose</h4>
+<p>Analyze how systems produce outcomes and connect to OA Service Delivery Areas.</p>
+</div>
+
+<h3>Steps</h3>
+
+<h4>1. Outcomes</h4>
+<ul>
+<li>placement</li>
+<li>retention</li>
+<li>wages</li>
+<li>credentials</li>
+</ul>
+
+<h4>2. Barriers</h4>
+<ul>
+<li>transportation</li>
+<li>childcare</li>
+<li>skills gaps</li>
+<li>employer practices</li>
+</ul>
+
+<h4>3. OA SDAs</h4>
+<ul>
+<li>Which SDA influences this?</li>
+<li>Design vs delivery vs alignment?</li>
+</ul>
+
+<div class="callout">
+👉 Move from “what is happening” → “why”
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Reflection -->
+<section id="reflection">
+<h2><span class="icon">🪞</span>Week 2 Reflection</h2>
+
+<div class="reflection-box">
+<h4>Systems Insight</h4>
+<ul>
+<li>What patterns did you notice?</li>
+<li>Which barriers show up most?</li>
+</ul>
+
+<h4>OA Alignment</h4>
+<ul>
+<li>Which SDAs are most connected?</li>
+<li>Where does design need to change?</li>
+</ul>
+
+<h4>Leadership Reflection</h4>
+<ul>
+<li>What is your role in shaping outcomes?</li>
+<li>Where can you influence change?</li>
+</ul>
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- Next Steps -->
+<section>
+<h2>Next Steps</h2>
+
+<p><strong>Week 3:</strong> OA Implementation Fidelity</p>
+
+<ul>
+<li>Finalize systems map</li>
+<li>Identify 2–3 breakdowns</li>
+<li>Connect to OA design</li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<p><strong>OA Fellows Program - Cohort 9</strong></p>
+<p>Goodwill Industries International</p>
+<p>© 2026</p>
+</footer>
+
+</body>
+</html>
