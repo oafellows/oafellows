@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1: Program Launch, Leadership Identity & Workforce Ecosystems - OA Fellows Cohort 9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            border-bottom: 3px solid #ffd700;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #1a3a52;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        /* Section */
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid #2c5aa0;
+        }
+
+        section h2 {
+            color: #1a3a52;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h3 {
+            color: #2c5aa0;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        section ul, section ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        section li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
+            border-left: 4px solid #2c5aa0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 1.05em;
+            font-weight: 500;
+        }
+
+        .callout strong {
+            color: #1a3a52;
+        }
+
+        /* Emphasis Arrow */
+        .arrow-emphasis {
+            color: #2c5aa0;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Collapsible Section */
+        .collapsible {
+            background: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 1px solid #ddd;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            margin: 10px 0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .collapsible:hover {
+            background: #efefef;
+        }
+
+        .collapsible.active {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .collapsible::after {
+            content: "▼";
+            color: inherit;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+
+        .collapsible.active::after {
+            content: "▲";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f0f8ff;
+        }
+
+        .content.active {
+            max-height: 2000px;
+            padding: 18px;
+        }
+
+        .content ul, .content ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        /* Learning Objectives Box */
+        .objectives-box {
+            background: linear-gradient(135deg, #fff4e6 0%, #ffe8cc 100%);
+            border-left: 4px solid #ff9800;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .objectives-box h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+
+        .objectives-box ol {
+            margin-left: 25px;
+        }
+
+        .objectives-box li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #2c5aa0, transparent);
+            margin: 30px 0;
+        }
+
+        /* Icon */
+        .icon {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+
+        /* Reflection Activity */
+        .reflection-box {
+            background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
+            border-left: 4px solid #9c27b0;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .reflection-box h4 {
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #2c5aa0;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #1a3a52;
+        }
+
+        .btn-secondary {
+            background: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #444;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3a52;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px 15px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            section h2 {
+                font-size: 1.4em;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #f0f8ff;
+            border: 1px solid #2c5aa0;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            color: #1a3a52;
+            margin-top: 0;
+        }
+
+        .toc ul {
+            margin-left: 20px;
+        }
+
+        .toc a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Activity Box */
+        .activity-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 4px solid #4caf50;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .activity-box h4 {
+            color: #1b5e20;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#objectives">Learning Objectives</a></li>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#oa-framework">OA Framework</a></li>
+            <li><a href="#system">Understanding Systems</a></li>
+            <li><a href="#leadership">Systems Leadership</a></li>
+            <li><a href="#your-role">Your Role</a></li>
+            <li><a href="#overview">Program Overview</a></li>
+            <li><a href="#activity">Applied Activity</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>OA Fellows Cohort 9</h1>
+            <p class="subtitle">Week 1: Program Launch, Leadership Identity & Workforce Ecosystems</p>
+        </header>
+
+        <!-- Learning Objectives Section -->
+        <section id="objectives">
+            <h2><span class="icon">🎯</span>Week 1 Learning Objectives</h2>
+            <div class="objectives-box">
+                <p>By the end of this session, fellows will be able to:</p>
+                <ol>
+                    <li>Describe workforce development as a complex ecosystem involving education, employers, government, philanthropy, and community organizations.</li>
+                    <li>Explain the role of the Opportunity Accelerator (OA) framework in advancing equitable economic mobility.</li>
+                    <li>Identify major workforce system actors operating within their local communities.</li>
+                    <li>Begin developing a leadership identity grounded in systems thinking, collaboration, and equity-centered implementation.</li>
+                    <li>Analyze how workforce systems, labor market conditions, and community supports shape economic mobility outcomes.</li>
+                    <li>Create a preliminary map of the workforce ecosystem in their local community.</li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h2><span class="icon">👋</span>Welcome to OA Fellows Cohort 9</h2>
+            <p>On behalf of Goodwill Industries International (GII), welcome to OA Fellows Cohort 9.</p>
+            
+            <p>The OA Fellows program was created to strengthen leadership capacity across the Goodwill network and prepare workforce professionals to navigate the increasing complexity of workforce development systems.</p>
+
+            <p>Communities across the country are experiencing rapid labor market shifts, changing employer expectations, persistent inequities in access to opportunity, and growing pressure to demonstrate measurable impact. Addressing these challenges requires more than effective programs. It requires leaders who can:</p>
+
+            <ul>
+                <li>think systemically</li>
+                <li>design equitable solutions</li>
+                <li>build cross-sector partnerships</li>
+                <li>interpret labor market realities</li>
+                <li>implement evidence-based practices</li>
+                <li>and sustain organizational change</li>
+            </ul>
+
+            <p>The OA Fellows experience is designed to strengthen leadership practice and implementation capacity while contributing to the broader impact of the Goodwill network.</p>
+
+            <div class="callout">
+                <strong>🚀 The Fellowship is not simply a professional development program.</strong><br><br>
+                <span class="arrow-emphasis">👉</span>It is a <strong>leadership development experience</strong> designed to prepare fellows to influence workforce systems and improve economic mobility outcomes within their communities.
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- OA Framework Section -->
+        <section id="oa-framework">
+            <h2><span class="icon">📊</span>The Opportunity Accelerator Framework</h2>
+            
+            <p>The Opportunity Accelerator (OA) framework provides Goodwill organizations with a structured approach to advancing equitable economic mobility.</p>
+
+            <p>The framework recognizes that workforce outcomes are influenced not only by training and employment services, but also by broader systems and conditions including:</p>
+
+            <ul>
+                <li>educational access</li>
+                <li>employer practices</li>
+                <li>transportation</li>
+                <li>housing stability</li>
+                <li>childcare</li>
+                <li>labor market demand</li>
+                <li>technology access</li>
+                <li>and public policy</li>
+            </ul>
+
+            <h3>OA Framework Principles</h3>
+            <p>The OA framework emphasizes:</p>
+            <ul>
+                <li>person-centered service delivery</li>
+                <li>systems thinking</li>
+                <li>employer partnership</li>
+                <li>evidence-based decision-making</li>
+                <li>implementation fidelity</li>
+                <li>and long-term participant advancement</li>
+            </ul>
+
+            <div class="callout">
+                <span class="arrow-emphasis">👉</span>Throughout the Fellowship, fellows will use the OA framework not as a reference, but as a <strong>decision-making tool</strong> to assess, design, and improve workforce strategies within their organizations.
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Understanding Workforce Systems Section -->
+        <section id="system">
+            <h2><span class="icon">🔗</span>Understanding Workforce Development as a System</h2>
+            
+            <p><strong>Workforce development is not a single program or organization.</strong></p>
+
+            <p>It is a network of interconnected systems, institutions, and stakeholders that collectively shape access to opportunity.</p>
+
+            <h3>Key Workforce Ecosystem Partners</h3>
+
+            <!-- Public Workforce Systems -->
+            <button class="collapsible">
+                <span>🏛️ Public Workforce Systems</span>
+            </button>
+            <div class="content">
+                <ul>
+                    <li>Workforce Development Boards</li>
+                    <li>American Job Centers</li>
+                    <li>State workforce agencies</li>
+                    <li>WIOA-funded programs</li>
+                </ul>
+            </div>
+
+            <!-- Education & Training Providers -->
+            <button class="collapsible">
+                <span>🎓 Education & Training Providers</span>
+            </button>
+            <div class="content">
+                <ul>
+                    <li>Community and technical colleges</li>
+                    <li>Adult education providers</li>
+                    <li>Apprenticeship programs</li>
+                    <li>Occupational training providers</li>
+                </ul>
+            </div>
+
+            <!-- Employers & Industry Partners -->
+            <button class="collapsible">
+                <span>💼 Employers & Industry Partners</span>
+            </button>
+            <div class="content">
+                <ul>
+                    <li>Major regional employers</li>
+                    <li>Industry associations</li>
+                    <li>Sector partnerships</li>
+                    <li>Chambers of commerce</li>
+                </ul>
+            </div>
+
+            <!-- Community & Human Service Organizations -->
+            <button class="collapsible">
+                <span>🤝 Community & Human Service Organizations</span>
+            </button>
+            <div class="content">
+                <ul>
+                    <li>Housing organizations</li>
+                    <li>Transportation providers</li>
+                    <li>Childcare agencies</li>
+                    <li>Mental health and recovery services</li>
+                    <li>Community-based organizations</li>
+                </ul>
+            </div>
+
+            <!-- Economic Development & Funding Partners -->
+            <button class="collapsible">
+                <span>💰 Economic Development & Funding Partners</span>
+            </button>
+            <div class="content">
+                <ul>
+                    <li>Economic development organizations</li>
+                    <li>Philanthropic organizations</li>
+                    <li>Municipal and state agencies</li>
+                    <li>Private funders</li>
+                </ul>
+            </div>
+
+            <h3>Reflection Questions</h3>
+            <div class="reflection-box">
+                <h4>Consider Your Local Workforce System</h4>
+                <ol>
+                    <li>Which organizations most influence workforce outcomes in your community?</li>
+                    <li>Where do strong partnerships currently exist?</li>
+                    <li>Where are the largest service or coordination gaps?</li>
+                    <li>Which populations face the greatest barriers to economic mobility?</li>
+                    <li>How does your organization contribute to the larger workforce ecosystem?</li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Systems Leadership Section -->
+        <section id="leadership">
+            <h2><span class="icon">👔</span>Systems Leadership in Workforce Development</h2>
+            
+            <p><strong>Traditional leadership often focuses on managing programs or supervising teams.</strong></p>
+
+            <p><strong>Systems leadership requires a broader perspective.</strong></p>
+
+            <h3>What Systems Leaders Do</h3>
+            <p>Systems leaders:</p>
+            <ul>
+                <li>understand how institutions interact</li>
+                <li>identify structural barriers</li>
+                <li>align resources toward shared outcomes</li>
+                <li>build cross-sector partnerships</li>
+                <li>use data to guide decision-making</li>
+                <li>and create conditions for sustainable change</li>
+            </ul>
+
+            <p>In workforce development, systems leadership recognizes that economic mobility is shaped by multiple interconnected factors.</p>
+
+            <div class="callout">
+                <strong>OA Fellows are expected to strengthen both operational expertise and systems leadership capacity throughout the Fellowship.</strong>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Your Role Section -->
+        <section id="your-role">
+            <h2><span class="icon">🟦</span>Stepping Into Your Role as a Workforce Systems Leader</h2>
+            
+            <p>This Fellowship is not about observing or learning concepts in isolation.</p>
+
+            <p><strong>It is about applying a systems perspective to your role starting now.</strong></p>
+
+            <p>As you begin this experience, consider:</p>
+            <ul>
+                <li>Where do you currently influence decisions?</li>
+                <li>Where do you want to influence decisions?</li>
+                <li>What opportunities exist to align your work more closely with system-level outcomes?</li>
+            </ul>
+
+            <div class="callout">
+                <span class="arrow-emphasis">👉</span>Throughout the Fellowship, you will move from understanding systems to <strong>actively shaping them</strong>.
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Program Overview Section -->
+        <section id="overview">
+            <h2><span class="icon">📋</span>OA Fellows Program Overview</h2>
+            
+            <h3>Program Structure</h3>
+            <p>The OA Fellows program is a cohort-based leadership experience that combines:</p>
+            <ul>
+                <li>virtual learning sessions</li>
+                <li>applied implementation activities</li>
+                <li>peer collaboration</li>
+                <li>leadership development</li>
+                <li>and organizational practice integration</li>
+            </ul>
+
+            <p>The program is designed to support workforce professionals in applying the Opportunity Accelerator framework with fidelity while strengthening systems leadership skills.</p>
+
+            <h3>Throughout the Fellowship, Fellows Will:</h3>
+            <ul>
+                <li>engage in collaborative learning</li>
+                <li>strengthen leadership and change management skills</li>
+                <li>analyze workforce systems and labor market dynamics</li>
+                <li>explore evidence-based workforce practices</li>
+                <li>apply OA tools and frameworks</li>
+                <li>participate in implementation-focused activities</li>
+                <li>contribute to peer learning across the Goodwill network</li>
+                <li>and develop strategies to improve economic mobility outcomes</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Applied Activity Section -->
+        <section id="activity">
+            <h2><span class="icon">🔍</span>Applied Activity: Mapping Your Local Workforce Ecosystem</h2>
+            
+            <div class="activity-box">
+                <h4>Purpose</h4>
+                <p>To better understand the systems, organizations, and partnerships that shape workforce outcomes and economic mobility in your community.</p>
+                <p><span class="arrow-emphasis">👉</span>This activity will serve as a foundation for understanding how <strong>OA Service Delivery Areas are currently operating within your local workforce system.</strong></p>
+            </div>
+
+            <h3>Instructions</h3>
+            <p>Create a preliminary map of your local workforce ecosystem.</p>
+
+            <p><strong>Include:</strong></p>
+
+            <h4>Workforce & Training Partners</h4>
+            <ul>
+                <li>Workforce boards</li>
+                <li>American Job Centers</li>
+                <li>Adult education providers</li>
+                <li>Community and technical colleges</li>
+                <li>Occupational training providers</li>
+                <li>Apprenticeship programs</li>
+            </ul>
+
+            <h4>Employers & Industry Partners</h4>
+            <ul>
+                <li>Major employers</li>
+                <li>Industry associations</li>
+                <li>Chambers of commerce</li>
+                <li>Sector partnerships</li>
+            </ul>
+
+            <h4>Community & Stabilization Supports</h4>
+            <ul>
+                <li>Housing organizations</li>
+                <li>Transportation providers</li>
+                <li>Childcare resources</li>
+                <li>Mental health and recovery services</li>
+                <li>Community-based organizations</li>
+            </ul>
+
+            <h4>Government & Funding Partners</h4>
+            <ul>
+                <li>State and local agencies</li>
+                <li>Philanthropic organizations</li>
+                <li>Public funding streams</li>
+                <li>Economic development organizations</li>
+            </ul>
+
+            <h3>Reflection Questions</h3>
+            <div class="reflection-box">
+                <h4>As You Complete Your Ecosystem Map</h4>
+                <ol>
+                    <li>Where do strong partnerships currently exist?</li>
+                    <li>Where are the largest gaps or breakdowns within the system?</li>
+                    <li>Which organizations hold the greatest influence over workforce outcomes?</li>
+                    <li>Which populations may still be underserved or excluded?</li>
+                    <li>Where does your organization create the greatest value within the ecosystem?</li>
+                    <li>What opportunities exist for stronger collaboration or alignment?</li>
+                </ol>
+            </div>
+
+            <h3>Deliverable</h3>
+            <div class="callout">
+                <strong>Bring your completed workforce ecosystem map to Week 2.</strong><br><br>
+                The goal is not perfection.<br><br>
+                <span class="arrow-emphasis">👉</span>The goal is to <strong>begin viewing workforce development through a systems lens.</strong>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Reflection Section -->
+        <section id="reflection">
+            <h2><span class="icon">🪞</span>Week 1 Reflection</h2>
+            
+            <p>After completing this activity, reflect on the following questions:</p>
+
+            <div class="reflection-box">
+                <h4>Personal Reflection</h4>
+                <ul>
+                    <li>What did you learn about how your local workforce system operates?</li>
+                    <li>Where do you see the greatest opportunity for change?</li>
+                    <li>What role could you play in influencing that change?</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <strong>Be prepared to build on this understanding in Week 2.</strong>
+            </div>
+
+            <h3>Next Steps</h3>
+            <div class="button-group">
+                <button class="btn" onclick="alert('Coming Soon: Week 2 materials will be available here.')">Explore Week 2</button>
+                <button class="btn btn-secondary" onclick="window.print()">Print This Page</button>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Preparation Work Section -->
+        <section>
+            <h2>Preparation Work for Week 2</h2>
+            <div class="callout">
+                <strong>Before next week, please:</strong>
+                <ul>
+                    <li>Complete your workforce ecosystem map</li>
+                    <li>Review your notes on local workforce partners</li>
+                    <li>Reflect on the discussion questions</li>
+                    <li>Identify 3-5 key insights from your mapping activity</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>OA Fellows Program - Cohort 9</strong></p>
+        <p>Goodwill Industries International</p>
+        <p>© 2026 | Leadership Development for Workforce Systems Change</p>
+    </footer>
+
+    <!-- JavaScript for Collapsible Sections -->
+    <script>
+        // Collapsible functionality
+        const collapsibles = document.querySelectorAll('.collapsible');
+
+        collapsibles.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Highlight active navigation item on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.borderBottomColor = 'transparent';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.borderBottomColor = '#ffd700';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
