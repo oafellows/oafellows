@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1: Program Launch, Leadership Identity & Workforce Ecosystems - OA Fellows Cohort 9</title>
     <style>
+        :root {
+            --navy: #194F90;
+            --mid: #1a6faf;
+            --teal: #49C5CD;
+            --red: #df4e61;
+            --pale: #eef5fb;
+            --cream: #f5f6f7;
+            --dark: #231f20;
+            --gray: #515b5a;
+            --lgray: #e6e7e8;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +27,14 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            background: var(--cream);
             min-height: 100vh;
         }
 
         /* Navigation */
         nav {
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            background: var(--navy);
             padding: 0;
             position: sticky;
             top: 0;
@@ -40,18 +53,18 @@
 
         nav a {
             display: block;
-            color: white;
+            color: var(--white);
             padding: 15px 20px;
             text-decoration: none;
             font-weight: 500;
             font-size: 14px;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease;
             border-bottom: 3px solid transparent;
         }
 
         nav a:hover {
-            background: rgba(255,255,255,0.1);
-            border-bottom: 3px solid #ffd700;
+            background: rgba(73, 197, 205, 0.2);
+            border-bottom: 3px solid var(--teal);
         }
 
         /* Main Container */
@@ -63,38 +76,39 @@
 
         /* Header */
         header {
-            background: white;
+            background: var(--white);
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-bottom: 40px;
             text-align: center;
+            border-top: 5px solid var(--teal);
         }
 
         header h1 {
-            color: #1a3a52;
+            color: var(--navy);
             margin-bottom: 10px;
             font-size: 2.5em;
         }
 
         header .subtitle {
-            color: #666;
+            color: var(--gray);
             font-size: 1.1em;
             font-style: italic;
         }
 
         /* Section */
         section {
-            background: white;
+            background: var(--white);
             padding: 40px;
             margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid #2c5aa0;
+            border-left: 5px solid var(--teal);
         }
 
         section h2 {
-            color: #1a3a52;
+            color: var(--navy);
             margin-bottom: 20px;
             font-size: 1.8em;
             display: flex;
@@ -103,10 +117,17 @@
         }
 
         section h3 {
-            color: #2c5aa0;
+            color: var(--mid);
             margin-top: 25px;
             margin-bottom: 15px;
             font-size: 1.3em;
+        }
+
+        section h4 {
+            color: var(--navy);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.1em;
         }
 
         section p {
@@ -126,8 +147,8 @@
 
         /* Callout Boxes */
         .callout {
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
-            border-left: 4px solid #2c5aa0;
+            background: var(--pale);
+            border-left: 4px solid var(--teal);
             padding: 20px;
             margin: 20px 0;
             border-radius: 4px;
@@ -136,24 +157,24 @@
         }
 
         .callout strong {
-            color: #1a3a52;
+            color: var(--navy);
         }
 
         /* Emphasis Arrow */
         .arrow-emphasis {
-            color: #2c5aa0;
+            color: var(--teal);
             font-weight: bold;
             margin-right: 8px;
         }
 
         /* Collapsible Section */
         .collapsible {
-            background: #f9f9f9;
-            color: #333;
+            background: var(--cream);
+            color: var(--dark);
             cursor: pointer;
             padding: 18px;
             width: 100%;
-            border: 1px solid #ddd;
+            border: 1px solid var(--lgray);
             text-align: left;
             outline: none;
             font-size: 1.1em;
@@ -163,16 +184,17 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .collapsible:hover {
-            background: #efefef;
+            background: var(--pale);
+            border-color: var(--teal);
         }
 
         .collapsible.active {
-            background: #2c5aa0;
-            color: white;
+            background: var(--teal);
+            color: var(--white);
         }
 
         .collapsible::after {
@@ -191,7 +213,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            background: #f0f8ff;
+            background: var(--pale);
         }
 
         .content.active {
@@ -210,15 +232,15 @@
 
         /* Learning Objectives Box */
         .objectives-box {
-            background: linear-gradient(135deg, #fff4e6 0%, #ffe8cc 100%);
-            border-left: 4px solid #ff9800;
+            background: #fff5eb;
+            border-left: 4px solid var(--red);
             padding: 25px;
             margin-bottom: 30px;
             border-radius: 4px;
         }
 
         .objectives-box h3 {
-            color: #e65100;
+            color: var(--red);
             margin-top: 0;
         }
 
@@ -234,7 +256,7 @@
         /* Divider */
         .divider {
             height: 2px;
-            background: linear-gradient(to right, transparent, #2c5aa0, transparent);
+            background: linear-gradient(to right, transparent, var(--teal), transparent);
             margin: 30px 0;
         }
 
@@ -246,15 +268,15 @@
 
         /* Reflection Activity */
         .reflection-box {
-            background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
-            border-left: 4px solid #9c27b0;
+            background: #f0f8f9;
+            border-left: 4px solid var(--teal);
             padding: 25px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
         .reflection-box h4 {
-            color: #6a1b9a;
+            color: var(--navy);
             margin-bottom: 15px;
         }
 
@@ -267,8 +289,8 @@
         }
 
         .btn {
-            background: #2c5aa0;
-            color: white;
+            background: var(--teal);
+            color: var(--white);
             padding: 12px 24px;
             border: none;
             border-radius: 4px;
@@ -277,24 +299,25 @@
             text-decoration: none;
             display: inline-block;
             transition: background 0.3s ease;
+            font-weight: 600;
         }
 
         .btn:hover {
-            background: #1a3a52;
+            background: var(--navy);
         }
 
         .btn-secondary {
-            background: #666;
+            background: var(--gray);
         }
 
         .btn-secondary:hover {
-            background: #444;
+            background: var(--dark);
         }
 
         /* Footer */
         footer {
-            background: #1a3a52;
-            color: white;
+            background: var(--navy);
+            color: var(--white);
             text-align: center;
             padding: 30px 20px;
             margin-top: 50px;
@@ -302,6 +325,15 @@
 
         footer p {
             margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive */
@@ -339,15 +371,15 @@
 
         /* Table of Contents */
         .toc {
-            background: #f0f8ff;
-            border: 1px solid #2c5aa0;
+            background: var(--pale);
+            border: 1px solid var(--teal);
             padding: 20px;
             border-radius: 4px;
             margin-bottom: 30px;
         }
 
         .toc h3 {
-            color: #1a3a52;
+            color: var(--navy);
             margin-top: 0;
         }
 
@@ -356,7 +388,7 @@
         }
 
         .toc a {
-            color: #2c5aa0;
+            color: var(--mid);
             text-decoration: none;
         }
 
@@ -366,15 +398,15 @@
 
         /* Activity Box */
         .activity-box {
-            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-            border-left: 4px solid #4caf50;
+            background: #f0faf8;
+            border-left: 4px solid var(--teal);
             padding: 25px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
         .activity-box h4 {
-            color: #1b5e20;
+            color: var(--navy);
             margin-bottom: 15px;
             margin-top: 0;
         }
@@ -429,7 +461,9 @@
             
             <p>The OA Fellows program was created to strengthen leadership capacity across the Goodwill network and prepare workforce professionals to navigate the increasing complexity of workforce development systems.</p>
 
-            <p>Communities across the country are experiencing rapid labor market shifts, changing employer expectations, persistent inequities in access to opportunity, and growing pressure to demonstrate measurable impact. Addressing these challenges requires more than effective programs. It requires leaders who can:</p>
+            <p>Communities across the country are experiencing rapid labor market shifts, changing employer expectations, persistent inequities in access to opportunity, and growing pressure to demonstrate impact and return on investment in workforce programs.</p>
+
+            <p>In response, OA Fellows must be prepared to:</p>
 
             <ul>
                 <li>think systemically</li>
@@ -444,7 +478,7 @@
 
             <div class="callout">
                 <strong>🚀 The Fellowship is not simply a professional development program.</strong><br><br>
-                <span class="arrow-emphasis">👉</span>It is a <strong>leadership development experience</strong> designed to prepare fellows to influence workforce systems and improve economic mobility outcomes within their communities.
+                <span class="arrow-emphasis">👉</span>It is a <strong>leadership development experience</strong> designed to prepare fellows to influence workforce systems and improve economic mobility across the communities you serve.
             </div>
         </section>
 
@@ -481,7 +515,7 @@
             </ul>
 
             <div class="callout">
-                <span class="arrow-emphasis">👉</span>Throughout the Fellowship, fellows will use the OA framework not as a reference, but as a <strong>decision-making tool</strong> to assess, design, and improve workforce strategies within their organizations.
+                <span class="arrow-emphasis">👉</span>Throughout the Fellowship, fellows will use the OA framework not as a reference, but as a <strong>decision-making tool</strong> to assess, design, and implement solutions that advance equitable economic mobility.
             </div>
         </section>
 
@@ -666,7 +700,7 @@
             <div class="activity-box">
                 <h4>Purpose</h4>
                 <p>To better understand the systems, organizations, and partnerships that shape workforce outcomes and economic mobility in your community.</p>
-                <p><span class="arrow-emphasis">👉</span>This activity will serve as a foundation for understanding how <strong>OA Service Delivery Areas are currently operating within your local workforce system.</strong></p>
+                <p><span class="arrow-emphasis">👉</span>This activity will serve as a foundation for understanding how <strong>OA Service Delivery Areas are currently operating within your local workforce ecosystem.</strong></p>
             </div>
 
             <h3>Instructions</h3>
@@ -825,7 +859,7 @@
             document.querySelectorAll('nav a').forEach(link => {
                 link.style.borderBottomColor = 'transparent';
                 if (link.getAttribute('href').slice(1) === current) {
-                    link.style.borderBottomColor = '#ffd700';
+                    link.style.borderBottomColor = '#49C5CD';
                 }
             });
         });
